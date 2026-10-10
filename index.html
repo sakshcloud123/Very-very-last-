@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Chinmay, With Love ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Parisienne&display=swap');
+
+:root {
+  --cream: #fbf6ef;
+  --ivory: #fffdf9;
+  --green: #879b83;
+  --deepgreen: #526b55;
+  --pink: #dba6ad;
+  --rose: #b66f7a;
+  --gold: #c5a56b;
+  --ink: #554b46;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(145deg, #fffdf9, #f7eee5, #f2e8df);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(740px, 100%);
+  margin: auto;
+  padding: 18px 14px 30px;
+}
+
+.topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #93867b;
+  margin-bottom: 16px;
+}
+
+.logo {
+  font-size: 25px;
+  color: var(--rose);
+}
+
+.progress {
+  height: 4px;
+  background: #e9dfd5;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--green), var(--pink), var(--gold));
+  transition: width .4s ease;
+}
+
+.card {
+  position: relative;
+  min-height: 530px;
+  padding: clamp(25px, 6vw, 45px);
+  border-radius: 24px;
+  background: #fffdf9ee;
+  border: 1px solid white;
+  box-shadow: 0 15px 50px #8a6c4d13;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: appear .4s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid #c5a56b50;
+  border-radius: 17px;
+  pointer-events: none;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.script {
+  font-family: 'Parisienne', cursive;
+  color: var(--rose);
+}
+
+.eyebrow {
+  color: var(--deepgreen);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+h1, h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+
+h1 { font-size: clamp(47px, 10vw, 76px); }
+h2 { font-size: clamp(36px, 8vw, 54px); }
+
+p {
+  max-width: 510px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #776b62;
+  margin: 8px auto;
+}
+
+.small {
+  font-size: 11px;
+  color: #a3978c;
+}
+
+.divider {
+  color: var(--gold);
+  letter-spacing: 8px;
+  margin: 12px 0;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.btn, .choice {
+  padding: 12px 17px;
+  border: 1px solid #d9c7af;
+  border-radius: 40px;
+  background: #fffaf3;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.primary {
+  background: var(--deepgreen);
+  border-color: var(--deepgreen);
+  color: white;
+}
+
+.pink {
+  background: #f4e3e5;
+  border-color: #e5c7cc;
+  color: #85545d;
+}
+
+.green {
+  background: #e5eee2;
+  border-color: #c4d6bf;
+  color: #526b55;
+}
+
+.gold {
+  background: #f5ecd9;
+  border-color: #e2d0a7;
+  color: #846a3e;
+}
+
+.gamebox {
+  width: 100%;
+  max-width: 490px;
+  padding: 17px;
+  margin: 13px auto;
+  border-radius: 18px;
+  border: 1px dashed #d8c4a9;
+  background: #f8f1e8;
+}
+
+.feedback {
+  min-height: 24px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--deepgreen);
+}
+
+.hidden { display: none !important; }
+
+.envelope {
+  font-size: 45px;
+  border: none;
+  background: transparent;
+  padding: 5px;
+}
+
+.gift {
+  font-size: 83px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform .3s;
+}
+
+.gift:hover { transform: rotate(-7deg) scale(1.06); }
+
+.reveal {
+  display: none;
+  padding: 16px;
+  margin-top: 13px;
+  border-radius: 15px;
+  border: 1px solid #e6d5bc;
+  background: #fffaf3;
+  animation: appear .4s;
+}
+
+.reveal.show { display: block; }
+
+.heartbasket {
+  font-size: 34px;
+  letter-spacing: 6px;
+  min-height: 50px;
+}
+
+.garden {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 14px auto;
+}
+
+.seed {
+  font-size: 27px;
+  padding: 8px;
+  border: 1px solid #d9cbb7;
+  border-radius: 12px;
+  background: #fffaf3;
+}
+
+.grid {
+  width: 100%;
+  max-width: 490px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 16px auto;
+}
+
+.memory {
+  padding: 16px 10px;
+  background: #f7ece7;
+  border: 1px solid #edd8d6;
+  border-radius: 14px;
+}
+
+.memory strong {
+  display: block;
+  color: var(--rose);
+  font: 27px 'Cormorant Garamond', serif;
+  margin-bottom: 6px;
+}
+
+.memory span {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #776b63;
+}
+
+.letter {
+  text-align: left;
+  width: 100%;
+  max-width: 490px;
+  padding: 18px;
+  background: #fffaf1;
+  border: 1px solid #e5d5ba;
+  border-radius: 9px;
+}
+
+.letter p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 4px;
+  font-size: 11px;
+  color: #a0968b;
+}
+
+.footer button {
+  border: none;
+  background: transparent;
+  color: var(--deepgreen);
+  padding: 6px;
+}
+
+.petal {
+  position: fixed;
+  top: -25px;
+  pointer-events: none;
+  z-index: 9;
+  color: #c68d99;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(300deg);
+    opacity: 0;
+  }
+}
+
+@media(max-width: 430px) {
+  .card { min-height: 500px; padding: 25px 18px; }
+  .topline { font-size: 8px; letter-spacing: .6px; }
+}
+</style>
+</head>
+
+<body>
+<main class="container">
+
+  <div class="topline">
+    <span>made with all my love</span>
+    <span class="logo">♡</span>
+    <span>for chinmay · 12 october</span>
+  </div>
+
+  <div class="progress">
+    <div class="bar" id="bar"></div>
+  </div>
+
+  <section class="card" id="card"></section>
+
+  <div class="footer">
+    <button id="back" onclick="move(-1)">← Go back</button>
+    <span id="count"></span>
+    <button onclick="restart()">Start over ↺</button>
+  </div>
+
+</main>
+
+<script>
+const card = document.getElementById('card');
+let page = 0;
+let caught = 0;
+let openedEnvelopes = new Set();
+let planted = new Set();
+let bossLevel = 0;
+
+const pages = [
+
+function() {
+return `
+<div class="eyebrow">a tiny surprise made just for you</div>
+<div class="script" style="font-size:39px">Hey, my bubu...</div>
+<h1>Chinmay ♡</h1>
+<div class="divider">✧ · ❀ · ✧</div>
+<p>I made you a little corner of the internet, filled with games, sweet notes, tiny surprises, and a whole lot of love.</p>
+<p>Ready, birthday boy? And no cheating by skipping ahead! 👀</p>
+<div class="buttons">
+<button class="btn primary" onclick="move(1)">Open your surprise →</button>
+</div>
+<p class="small">a little love, made just for you</p>`;
+},
+
+function() {
+return `
+<div class="eyebrow">chapter one · let's play</div>
+<h2>Catch my hearts!</h2>
+<p>Quick, bubu! Catch five hearts in your basket. Every heart is a tiny bit of love from me.</p>
+<div class="gamebox">
+<div class="heartbasket" id="heartbasket">♡ ♡ ♡ ♡ ♡</div>
+<p id="score">Hearts caught: 0 / 5</p>
+<div class="buttons">
+<button class="btn pink" id="catchbutton" onclick="catchHeart()">♡ Catch a heart!</button>
+</div>
+<div class="feedback" id="heartfeedback">Ready, my love? Catch your first heart!</div>
+</div>
+<div class="buttons">
+<button class="btn primary hidden" id="heartnext" onclick="move(1)">All hearts caught! →</button>
+</div>`;
+},
+
+function() {
+return `
+<div class="eyebrow">chapter two · secret messages</div>
+<h2>Open an envelope</h2>
+<p>Three little envelopes. Three little messages. Pick one to discover something I want you to remember.</p>
+<div class="gamebox">
+<div class="buttons">
+<button class="envelope" onclick="openEnvelope(0)">💌</button>
+<button class="envelope" onclick="openEnvelope(1)">💌</button>
+<button class="envelope" onclick="openEnvelope(2)">💌</button>
+</div>
+<p class="small">choose an envelope, birthday boy</p>
+<div class="reveal" id="envelopereveal">
+<div class="script" style="font-size:30px">a note for you ♡</div>
+<p id="envelopetext"></p>
+</div>
+<div class="feedback" id="envelopefeedback">Opened: 0 / 3</div>
+</div>
+<div class="buttons">
+<button class="btn primary" onclick="move(1)">Grow our garden →</button>
+</div>`;
+},
+
+function() {
+return `
+<div class="eyebrow">chapter three · our little garden</div>
+<h2>Plant a little love</h2>
+<p>Plant all three seeds, then water them to grow our little love garden.</p>
+<div class="gamebox">
+<div class="garden" id="garden">
+<button class="seed" onclick="plantSeed(0)">🌱</button>
+<button class="seed" onclick="plantSeed(1)">🌱</button>
+<button class="seed" onclick="plantSeed(2)">🌱</button>
+</div>
+<div class="feedback" id="gardenfeedback">Three little seeds are waiting for you.</div>
+<div class="buttons">
+<button class="btn green" onclick="waterGarden()">💧 Water the garden</button>
+</div>
+<div class="reveal" id="gardenreveal">
+<div class="script" style="font-size:31px">Look what we grew!</div>
+<p>Like a garden, love grows with patience, kindness, laughter, and little acts of care.</p>
+<div style="font-size:32px">🌷 🌼 🌿 🌸</div>
+</div>
+</div>
+<div class="buttons">
+<button class="btn primary" onclick="move(1)">Open the mystery gift →</button>
+</div>`;
+},
+
+function() {
+return `
+<div class="eyebrow">chapter four · a mystery awaits</div>
+<h2>A gift for my bubu</h2>
+<p>This little box has been waiting for its favourite person to arrive.</p>
+<div class="gamebox">
+<div class="gift" id="gift" onclick="openGift()">🎁</div>
+<p class="small">Tap the box to untie the ribbon!</p>
+<div class="reveal" id="giftreveal">
+<div class="script" style="font-size:32px">Surprise, my love!</div>
+<p>Your gift voucher includes unlimited hugs, forehead kisses, hand-holding, and me annoying you with affection.</p>
+<p><strong>Value:</strong> priceless. <strong>Expiry:</strong> never.</p>
+<div style="font-size:28px">♡ ✧ ♡</div>
+</div>
+</div>
+<div class="buttons">
+<button class="btn primary" onclick="move(1)">Open the scrapbook →</button>
+</div>`;
+},
+
+function() {
+return `
+<div class="eyebrow">chapter five · little things, big feelings</div>
+<h2>Our little scrapbook</h2>
+<p>Not every beautiful thing needs a big moment. Some of my favourite feelings live in the little things.</p>
+<div class="grid">
+<div class="memory"><strong>♡</strong><span>The way you can make an ordinary day feel special.</span></div>
+<div class="memory"><strong>✿</strong><span>The silly conversations I wish could last longer.</span></div>
+<div class="memory"><strong>☾</strong><span>The comfort of having someone I can miss this much.</span></div>
+<div class="memory"><strong>✧</strong><span>The happiness I find just thinking about you.</span></div>
+</div>
+<div class="letter">
+<p>Dear Chinmay,</p>
+<p>Thank you for being part of my story. I hope this year brings you peace, proud moments, new adventures, and so many reasons to smile.</p>
+<p>I hope you always remember how loved you are—not just on your birthday, but on the ordinary days too.</p>
+<p class="script" style="font-size:30px;text-align:right">Always in your corner ♡</p>
+</div>
+<div class="buttons">
+<button class="btn primary" onclick="move(1)">One last birthday game →</button>
+</div>`;
+},
+
+function() {
+return `
+<div class="eyebrow">chapter six · birthday boss battle</div>
+<h2>Birthday boss battle!</h2>
+<p>Three questions. One very cute birthday boy. Let's see if you can defeat the birthday boss.</p>
+<div class="gamebox">
+<p id="bossprompt"><strong>Level 1:</strong> What is your official job on your birthday?</p>
+<div class="buttons" id="bosschoices">
+<button class="choice" onclick="bossAnswer(0)">Be spoiled</button>
+<button class="choice" onclick="bossAnswer(1)">Do chores</button>
+<button class="choice" onclick="bossAnswer(2)">Act serious</button>
+</div>
+<div class="feedback" id="bossfeedback"></div>
+</div>
+<div class="buttons">
+<button class="btn primary hidden" id="bossnext" onclick="move(1)">Claim your birthday letter →</button>
+</div>`;
+},
+
+function() {
+return `
+<div class="eyebrow">your special day · 12 october</div>
+<div class="script" style="font-size:39px">Happy birthday, my love</div>
+<h1>Chinmay ♡</h1>
+<div class="divider">✧ · ❀ · ✧</div>
+<div class="letter">
+<p>My Chinmay,</p>
+<p>Happy birthday to someone who has such a special place in my heart. I hope this new year of your life brings you closer to your dreams and gives you the kind of happiness that stays long after the moment has passed.</p>
+<p>I hope you keep believing in yourself, keep laughing that laugh I love, and never forget how much you matter. I may tease you, annoy you, and steal your attention whenever I can—but underneath all of that is so much love and care for you.</p>
+<p>Today, I hope you feel celebrated, appreciated, and truly special. You deserve beautiful things today and every day.</p>
+<p class="script" style="font-size:31px;text-align:right">Happy birthday, bubu. ♡</p>
+</div>
+<div class="buttons">
+<button class="btn gold" onclick="sparkles()">Send a birthday sparkle ✨</button>
+<button class="btn primary" onclick="restart()">Read it all again ↺</button>
+</div>
+<p class="small">made with love, just for you</p>`;
+}
+
+];
+
+function render() {
+card.innerHTML = pages[page]();
+document.getElementById('bar').style.width =
+  ((page + 1) / pages.length * 100) + '%';
+document.getElementById('count').textContent =
+  (page + 1) + ' / ' + pages.length;
+document.getElementById('back').style.visibility =
+  page === 0 ? 'hidden' : 'visible';
+window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function move(direction) {
+page = Math.max(0, Math.min(pages.length - 1, page + direction));
+render();
+}
+
+function restart() {
+page = 0;
+caught = 0;
+openedEnvelopes = new Set();
+planted = new Set();
+bossLevel = 0;
+render();
+}
+
+function catchHeart() {
+if (caught >= 5) return;
+caught++;
+
+document.getElementById('heartbasket').textContent =
+  '♥ '.repeat(caught) + '♡ '.repeat(5 - caught);
+document.getElementById('score').textContent =
+  'Hearts caught: ' + caught + ' / 5';
+
+const messages = [
+  'One heart caught! A little love for you. ♡',
+  'Two! You are pretty good at this, bubu.',
+  'Three hearts! Someone is getting spoiled.',
+  'Four! Just one more, my love.',
+  'All five! You caught my heart a long time ago. ♡'
+];
+
+document.getElementById('heartfeedback').textContent = messages[caught - 1];
+
+if (caught === 5) {
+  document.getElementById('catchbutton').classList.add('hidden');
+  document.getElementById('heartnext').classList.remove('hidden');
+}
+}
+
+const envelopeNotes = [
+  'You are allowed to have difficult days and still be doing your best. Please be gentle with yourself. ♡',
+  'Tiny reminder: you are appreciated for who you are, not just for what you do. I am always cheering for you.',
+  'If today gets noisy, take a breath and remember that someone is smiling just because you exist. Yes, it is me!'
+];
+
+function openEnvelope(index) {
+openedEnvelopes.add(index);
+document.getElementById('envelopetext').textContent = envelopeNotes[index];
+document.getElementById('envelopereveal').classList.add('show');
+document.getElementById('envelopefeedback').textContent =
+  'Opened: ' + openedEnvelopes.size + ' / 3 envelopes';
+}
+
+function plantSeed(index) {
+if (planted.has(index)) return;
+planted.add(index);
+
+const buttons = document.querySelectorAll('#garden button');
+buttons[index].textContent = '🌷';
+buttons[index].disabled = true;
+buttons[index].style.background = '#e5eee2';
+
+document.getElementById('gardenfeedback').textContent =
+  planted.size + ' of 3 seeds planted!';
+
+if (planted.size === 3) {
+  document.getElementById('gardenfeedback').textContent =
+    'All three seeds are planted. Time to water them!';
+}
+}
+
+function waterGarden() {
+if (planted.size < 3) {
+  document.getElementById('gardenfeedback').textContent =
+    'Plant all three seeds first, gardener! 🌱';
+  return;
+}
+document.getElementById('gardenreveal').classList.add('show');
+document.getElementById('gardenfeedback').textContent =
+  'Your little garden is blooming! 🌸';
+}
+
+function openGift() {
+document.getElementById('gift').textContent = '🎀';
+document.getElementById('giftreveal').classList.add('show');
+}
+
+const bossQuestions = [
+{
+  question: 'Level 2: What should you do when your girl says “one last hug”?',
+  choices: ['Give one tiny hug', 'Prepare for a hug marathon', 'Run away'],
+  answer: 1,
+  message: 'Correct! “One last hug” is a legally non-binding phrase.'
+},
+{
+  question: 'Final level: What is the most important birthday rule?',
+  choices: ['Eat cake', 'Smile a lot', 'Remember you are very loved'],
+  answer: 2,
+  message: 'Boss defeated! You unlocked your special birthday letter.'
+}
+];
+
+function bossAnswer(choice) {
+if (page !== 6) return;
+
+if (bossLevel === 0) {
+  if (choice !== 0) {
+    document.getElementById('bossfeedback').textContent =
+      'Hmm, try again, birthday boy. Think carefully! ♡';
+    return;
+  }
+
+  document.getElementById('bossfeedback').textContent =
+    'Correct! Your only job is to accept affection gracefully.';
+  bossLevel = 1;
+  document.getElementById('bossprompt').textContent =
+    bossQuestions[0].question;
+  document.getElementById('bosschoices').innerHTML =
+    bossQuestions[0].choices.map((text, i) =>
+      `<button class="choice" onclick="bossAnswer(${i})">${text}</button>`
+    ).join('');
+  return;
+}
+
+const question = bossQuestions[bossLevel - 1];
+
+if (choice !== question.answer) {
+  document.getElementById('bossfeedback').textContent =
+    'Not quite! Give it another try, bubu. ♡';
+  return;
+}
+
+document.getElementById('bossfeedback').textContent = question.message;
+
+if (bossLevel === 1) {
+  bossLevel = 2;
+  document.getElementById('bossprompt').textContent =
+    bossQuestions[1].question;
+  document.getElementById('bosschoices').innerHTML =
+    bossQuestions[1].choices.map((text, i) =>
+      `<button class="choice" onclick="bossAnswer(${i})">${text}</button>`
+    ).join('');
+} else {
+  document.getElementById('bosschoices').innerHTML = '';
+  document.getElementById('bossnext').classList.remove('hidden');
+}
+}
+
+function sparkles() {
+for (let i = 0; i < 35; i++) {
+  const petal = document.createElement('span');
+  petal.className = 'petal';
+  petal.textContent = ['♡', '✧', '✿', '❀'][Math.floor(Math.random() * 4)];
+  petal.style.left = Math.random() * 100 + 'vw';
+  petal.style.fontSize = (14 + Math.random() * 18) + 'px';
+  petal.style.animationDuration = (3 + Math.random() * 4) + 's';
+  document.body.appendChild(petal);
+  setTimeout(() => petal.remove(), 7500);
+}
+}
+
+setInterval(() => {
+if (Math.random() > .4) {
+  const petal = document.createElement('span');
+  petal.className = 'petal';
+  petal.textContent = ['✿', '♡', '✧'][Math.floor(Math.random() * 3)];
+  petal.style.left = Math.random() * 100 + 'vw';
+  petal.style.fontSize = (12 + Math.random() * 10) + 'px';
+  petal.style.animationDuration = (7 + Math.random() * 5) + 's';
+  document.body.appendChild(petal);
+  setTimeout(() => petal.remove(), 13000);
+}
+}, 1600);
+
+render();
+</script>
+</body>
+                                              </html>
